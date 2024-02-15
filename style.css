@@ -24,6 +24,8 @@ nav {
     color: #f9faf8;
 }
 
+/* add pages to headerlinks */
+
 ul {
     display: flex;
     list-style-type: none;
@@ -73,21 +75,12 @@ a {
 }
 
 .placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #8DA399;
+  background-color: #cfd2d6;
   margin: 64px;
-  padding: 48px;
-  border: 1px;
-  width: 400px;
-  height: 150px;
+  width: 450px;
+  height: 250px;
 }
 
-.placeholder {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-}
 .website {
     font-size: 48px;
     color: #F9FAF8;
@@ -101,7 +94,7 @@ a {
 }
 
 .button1 {
-    background-color: #c5af31;
+    background-color: #d7a238;
     border: 3px;
     padding: 8px 32px;
     margin-top: 12px;
@@ -111,5 +104,176 @@ a {
 }
 
 .button1:hover {
-    background-color: #cfd2d6;
+    background-color: #c6730d;
+}
+.information {
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#1F2937;
+    font-size: 2.25em;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.information {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    margin-bottom: 1vh;
+}
+
+/* add pages to personality types */
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex: wrap;
+    margin: 0px 32px;
+    margin-bottom: 64px;
+}
+
+.box-item {
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    width: fit-content;
+}
+
+.box-one {
+    display: flex;
+    width:160px;
+    height:160px;
+    background-color: white;
+    border: 4px solid #d7a238;
+    border-radius: 16px;
+    margin-bottom: 16px;   
+}
+
+.box-two {
+    display: flex;
+    width:160px;
+    height:160px;
+    background-color: white;
+    border: 4px solid #d7a238;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.box-three {
+    display: flex;
+    width:160px;
+    height:160px;
+    background-color: white;
+    border: 4px solid #d7a238;
+    border-radius: 16px;
+    margin-bottom: 16px;   
+}
+
+
+.box-four {
+    display: flex;
+    width:160px;
+    height:160px;
+    background-color: white;
+    border: 4px solid #d7a238;
+    border-radius: 16px;
+    margin-bottom: 16px;  
+}
+
+/* adjust space of boxes
+    images are not centered in box */
+
+.box-item > p {
+    font-size: 1.15em;
+    color: grey;
+    width: 150px;
+    text-align: center;
+}
+
+.thor-all {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #e5e7eb;
+    height: 20vh;
+    padding: 110px 350px;
+    margin-top: 10vh;
+   
+}
+
+.thor {
+    font-style: italic;
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 100;
+}
+
+/* adjust text top left and quote bottom right
+    style and boxes match requirements/ complete */
+
+.quote {
+    align-self: flex-end;
+}
+
+.quote {
+    font-style: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 86px;
+    margin: 96px 168px;
+    border-radius: 8px;
+    /* make Button clickable/ complete */
+}
+
+.action {
+    font-size: 1.5em;
+    background-color: #23a3a9;
+    color: white;
+}
+
+
+.time {
+    display: block;
+    font-style: sans-serif;
+}
+
+.button2 {
+    border: 2px solid white;
+    background-color: #d7a238;
+    color: white;
+    padding: 16px 48px ;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-color: #c6730d;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #27a798;
+    color: white;
+    padding: 32px;
 }
