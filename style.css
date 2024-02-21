@@ -277,3 +277,20 @@ a {
     color: white;
     padding: 32px;
 }
+
+/* one.html specifics */  
+
+
+.thor_dawdler {
+    font-style: italic;
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.empty {
+    margin: 20px;
+    padding: 20px;
+    height: 100px;
+}
