@@ -75,7 +75,7 @@ a {
 }
 
 .placeholder {
-  background-color: #cfd2d6;
+  background-color: antiquewhite;
   margin: 64px;
   width: 450px;
   height: 250px;
@@ -83,18 +83,19 @@ a {
 
 .website {
     font-size: 48px;
-    color: #F9FAF8;
+    color: antiquewhite;
     font-weight: extra-bold;
     font-family: Arial, Helvetica, sans-serif
 }
 
 .subtext {
+    color: antiquewhite;
     margin-top: 8px;
     font-size: 20px;
 }
 
 .button1 {
-    background-color: #d7a238;
+    background-color: #f2be55;
     border: 3px;
     padding: 8px 32px;
     margin-top: 12px;
@@ -104,7 +105,7 @@ a {
 }
 
 .button1:hover {
-    background-color: #c6730d;
+    background-color: #efa243;
 }
 .information {
     font-weight: 700;
@@ -243,8 +244,8 @@ a {
 
 .action {
     font-size: 1.5em;
-    background-color: #23a3a9;
-    color: white;
+    background-color: #f2be55;
+    color: #1F2937;
 }
 
 
@@ -254,9 +255,9 @@ a {
 }
 
 .button2 {
-    border: 2px solid white;
-    background-color: #d7a238;
-    color: white;
+    border: 2px solid #1F2937;
+    background-color: rgb(228, 144, 34);
+    color: #1F2937;
     padding: 16px 48px ;
     font-size: 16px;
     border-radius: 8px;
@@ -265,7 +266,8 @@ a {
 }
 
 .button2:hover {
-    background-color: #c6730d;
+    background-color: #efa243;
+   
 }
 
 
@@ -274,7 +276,7 @@ a {
     justify-content: center;
     align-items: center;
     background-color: #27a798;
-    color: white;
+    color: antiquewhite;
     padding: 32px;
 }
 
@@ -287,6 +289,7 @@ a {
     color: #1F2937;
     font-weight: 100;
     margin-bottom: 10px;
+    margin-top: -70px;
 }
 
 .empty {
