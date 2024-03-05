@@ -5,7 +5,7 @@
 
 header {
     background-color: #27a798;
-    padding: 16px 100px 64px;
+    padding: 16px 100px 0px;
     color: #e5e7eb;
 
 }
@@ -76,10 +76,11 @@ a {
 
 .placeholder {
   background-color: antiquewhite;
-  border: 4px solid #d7a238;
+  border: 4px solid;
+  border-color: rgb(228, 144, 34);
   margin: 64px;
-  width: 450px;
-  height: 250px;
+  width: 500px;
+  height: 300px;
 }
 
 .website {
@@ -96,7 +97,8 @@ a {
 }
 
 .button1 {
-    background-color: #f2be55;
+    border: 4px solid;
+    background-color: rgb(228, 144, 34);
     border: 3px;
     padding: 8px 32px;
     margin-top: 12px;
@@ -106,7 +108,7 @@ a {
 }
 
 .button1:hover {
-    background-color: #efa243;
+    background-color: #f2be55;
 }
 .information {
     font-weight: 700;
@@ -134,7 +136,6 @@ a {
     margin-bottom: 1vh;
 }
 
-/* add pages to personality types */
 
 .boxes {
     display: flex;
@@ -154,30 +155,30 @@ a {
 
 .box-one {
     display: flex;
-    width:160px;
-    height:160px;
+    width:250px;
+    height:250px;
     background-color: white;
-    border: 4px solid #d7a238;
+    border: 4px solid rgb(228, 144, 34);
 
     margin-bottom: 16px;   
 }
 
 .box-two {
     display: flex;
-    width:160px;
-    height:160px;
+    width:250px;
+    height:250px;
     background-color: white;
-    border: 4px solid #d7a238;
+    border: 4px solid rgb(228, 144, 34);
     
     margin-bottom: 16px;
 }
 
 .box-three {
     display: flex;
-    width:160px;
-    height:160px;
+    width:250px;
+    height:250px;
     background-color: white;
-    border: 4px solid #d7a238;
+    border: 4px solid rgb(228, 144, 34);
     
     margin-bottom: 16px;   
 }
@@ -185,10 +186,10 @@ a {
 
 .box-four {
     display: flex;
-    width:160px;
-    height:160px;
+    width:250px;
+    height:250px;
     background-color: white;
-    border: 4px solid #d7a238;
+    border: 4px solid rgb(228, 144, 34);
 
     margin-bottom: 16px;  
 }
@@ -199,7 +200,7 @@ a {
 .box-item > p {
     font-size: 1.15em;
     color: grey;
-    width: 150px;
+    width: 100%;
     text-align: center;
 }
 
