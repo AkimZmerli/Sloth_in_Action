@@ -1,0 +1,301 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #27a798;
+    padding: 16px 100px 0px;
+    color: #e5e7eb;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    
+}
+
+nav {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f9faf8;
+}
+
+/* add pages to headerlinks */
+
+ul {
+    display: flex;
+    list-style-type: none;
+    gap: 16px;
+    font-size: 18px;
+  
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0f2ee;
+}
+
+
+a {
+    text-decoration: none;
+    color: antiquewhite;
+
+}
+
+
+.header.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.header.container {
+    padding: 32px;
+    margin-bottom: 48px;
+    margin-top: 48px;
+}
+
+
+.awesome {
+    display: flex;
+    margin: 48px;
+    justify-content: center;
+}
+
+.more {
+    display: block;
+    padding: 24px;
+    width: 400px;
+    margin: 32px;
+
+}
+
+.placeholder {
+  background-color: antiquewhite;
+  border: 4px solid;
+  border-color: rgb(228, 144, 34);
+  margin: 64px;
+  width: 500px;
+  height: 300px;
+}
+
+.website {
+    font-size: 48px;
+    color: antiquewhite;
+    font-weight: extra-bold;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.subtext {
+    color: antiquewhite;
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.button1 {
+    border: 4px solid;
+    background-color: rgb(228, 144, 34);
+    border: 3px;
+    padding: 8px 32px;
+    margin-top: 12px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: #f2be55;
+}
+.information {
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#1F2937;
+    font-size: 2.25em;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.information {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    margin-bottom: 1vh;
+}
+
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex: wrap;
+    margin: 0px 32px;
+    margin-bottom: 64px;
+}
+
+.box-item {
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    width: fit-content;
+}
+
+.box-one {
+    display: flex;
+    width:250px;
+    height:250px;
+    background-color: white;
+    border: 4px solid rgb(228, 144, 34);
+
+    margin-bottom: 16px;   
+}
+
+.box-two {
+    display: flex;
+    width:250px;
+    height:250px;
+    background-color: white;
+    border: 4px solid rgb(228, 144, 34);
+    
+    margin-bottom: 16px;
+}
+
+.box-three {
+    display: flex;
+    width:250px;
+    height:250px;
+    background-color: white;
+    border: 4px solid rgb(228, 144, 34);
+    
+    margin-bottom: 16px;   
+}
+
+
+.box-four {
+    display: flex;
+    width:250px;
+    height:250px;
+    background-color: white;
+    border: 4px solid rgb(228, 144, 34);
+
+    margin-bottom: 16px;  
+}
+
+/* adjust space of boxes
+    images are not centered in box */
+
+.box-item > p {
+    font-size: 1.15em;
+    color: grey;
+    width: 100%;
+    text-align: center;
+}
+
+.thor-all {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #e5e7eb;
+    height: 20vh;
+    padding: 110px 350px;
+    margin-top: 10vh;
+   
+}
+
+.thor {
+    font-style: italic;
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 100;
+}
+
+/* adjust text top left and quote bottom right
+    style and boxes match requirements/ complete */
+
+.quote {
+    align-self: flex-end;
+}
+
+.quote {
+    font-style: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 86px;
+    margin: 96px 168px;
+    border-radius: 8px;
+    /* make Button clickable/ complete */
+}
+
+.action {
+    font-size: 1.5em;
+    background-color: #f2be55;
+    color: #1F2937;
+}
+
+
+.time {
+    display: block;
+    font-style: sans-serif;
+}
+
+.button2 {
+    border: 2px solid #1F2937;
+    background-color: rgb(228, 144, 34);
+    color: #1F2937;
+    padding: 16px 48px ;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-color: #efa243;
+   
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #27a798;
+    color: antiquewhite;
+    padding: 32px;
+}
+
+/* one.html specifics */  
+
+
+.thor_dawdler {
+    font-style: italic;
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-top: -70px;
+}
+
+.empty {
+    margin: 20px;
+    padding: 20px;
+    height: 100px;
+}
