@@ -334,8 +334,11 @@ header {
 
 .sloth-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
+  padding: 10px;
+  background: #f8fafc;
   transition: var(--transition);
 }
 
@@ -389,10 +392,11 @@ header {
 .quote-text {
   font-size: 1.5rem;
   font-style: italic;
-  color: var(--text-dark);
+  color: var(--primary-color);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   position: relative;
+  font-weight: 600;
 }
 
 .quote-text::before,
@@ -449,12 +453,12 @@ header {
 }
 
 .btn-cta {
-  background: var(--text-dark);
+  background: #0f172a;
   color: var(--text-light);
 }
 
 .btn-cta:hover {
-  background: #374151;
+  background: #1e293b;
   transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
 }
@@ -592,7 +596,7 @@ header {
 
 /* Footer */
 .footer {
-  background: var(--text-dark);
+  background: var(--primary-color);
   color: var(--text-light);
   padding: 2rem;
   text-align: center;

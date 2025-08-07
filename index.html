@@ -41,9 +41,9 @@
               <p>Really?! This fan page is dedicated to bringing you all the latest insights on why we should all procrastinate even more!</p>
             </div>
             <div class="cta-buttons">
-              <a href="https://www.youtube.com/watch?v=qYKrqd9VacY" target="_blank" class="btn-primary">
+              <button class="btn-primary" onclick="startProcrastinating()">
                 Start procrastinating ⚡
-              </a>
+              </button>
               <button class="sloth-facts-btn btn-secondary" onclick="showRandomFact()">
                 Random Sloth Fact 🤔
               </button>
@@ -223,10 +223,90 @@
         document.getElementById('navLinks').classList.toggle('active');
       });
 
-      // Productivity meter animation
+      // Productivity meter animation and interactions
+      let currentProductivity = 5;
+      
       setTimeout(() => {
         document.getElementById('productivityMeter').style.width = '5%';
       }, 1000);
+
+      function updateProductivityMeter() {
+        // Ensure productivity never goes below 1% or above 10%
+        currentProductivity = Math.max(1, Math.min(10, currentProductivity));
+        const meter = document.getElementById('productivityMeter');
+        const percentage = document.querySelector('.meter-percentage');
+        
+        meter.style.width = currentProductivity + '%';
+        percentage.textContent = currentProductivity + '%';
+        
+        // Change colors based on productivity level
+        if (currentProductivity <= 3) {
+          meter.style.background = 'linear-gradient(135deg, #dc2626 0%, #ef4444 100%)'; // Red for very low
+        } else if (currentProductivity <= 5) {
+          meter.style.background = 'var(--gradient-primary)'; // Teal for normal
+        } else {
+          meter.style.background = 'linear-gradient(135deg, #f59e0b 0%, #f97316 100%)'; // Orange for "too high"
+        }
+      }
+
+      function decreaseProductivity() {
+        currentProductivity = Math.max(1, currentProductivity - 1);
+        updateProductivityMeter();
+      }
+
+      function increaseProductivity() {
+        currentProductivity = Math.min(10, currentProductivity + 1);
+        updateProductivityMeter();
+      }
+
+      // Start procrastinating function
+      function startProcrastinating() {
+        const procrastinationActivities = [
+          "Opening 47 browser tabs about random topics",
+          "Watching sloth compilation videos on repeat", 
+          "Reorganizing your desktop icons by color",
+          "Reading Wikipedia articles about ancient civilizations",
+          "Checking social media for 'just a minute'",
+          "Making the perfect cup of coffee... again",
+          "Staring at the ceiling and contemplating existence"
+        ];
+        
+        const randomActivity = procrastinationActivities[Math.floor(Math.random() * procrastinationActivities.length)];
+        
+        // Decrease productivity when starting to procrastinate
+        decreaseProductivity();
+        
+        // Show activity in a temporary popup
+        const popup = document.createElement('div');
+        popup.style.cssText = `
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: var(--bg-card);
+          padding: 2rem;
+          border-radius: var(--border-radius);
+          box-shadow: var(--shadow-hover);
+          z-index: 1001;
+          text-align: center;
+          max-width: 400px;
+          animation: slideIn 0.3s ease;
+        `;
+        popup.innerHTML = `
+          <h3 style="color: var(--primary-color); margin-bottom: 1rem;">🦥 Procrastination Activated!</h3>
+          <p style="margin-bottom: 1.5rem;">${randomActivity}</p>
+          <button onclick="this.parentElement.remove()" style="background: var(--gradient-primary); color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer;">Perfect! 👌</button>
+        `;
+        
+        document.body.appendChild(popup);
+        
+        // Auto-remove after 4 seconds
+        setTimeout(() => {
+          if (popup.parentElement) {
+            popup.remove();
+          }
+        }, 4000);
+      }
 
       // Random sloth facts
       const slothFacts = [
@@ -249,28 +329,38 @@
         document.getElementById('factModal').style.display = 'none';
       }
 
-      // Procrastination timer
+      // Procrastination timer (starts with milliseconds)
       let procrastinationTime = 0;
       let procrastinationTimer;
 
       function startProcrastinationTimer() {
+        const timerBtn = document.querySelector('.feature-btn');
         if (procrastinationTimer) {
           clearInterval(procrastinationTimer);
           procrastinationTimer = null;
-          document.querySelector('.feature-btn').textContent = 'Start Timer';
+          timerBtn.textContent = 'Start Timer';
+          // Decrease productivity when stopping timer
+          decreaseProductivity();
           return;
         }
 
-        document.querySelector('.feature-btn').textContent = 'Stop Timer';
+        timerBtn.textContent = 'Stop Timer';
         procrastinationTimer = setInterval(() => {
-          procrastinationTime++;
-          const hours = Math.floor(procrastinationTime / 3600);
-          const minutes = Math.floor((procrastinationTime % 3600) / 60);
-          const seconds = procrastinationTime % 60;
+          procrastinationTime += 10; // increment by 10ms
+          const totalMs = procrastinationTime;
+          const hours = Math.floor(totalMs / 3600000);
+          const minutes = Math.floor((totalMs % 3600000) / 60000);
+          const seconds = Math.floor((totalMs % 60000) / 1000);
+          const milliseconds = Math.floor((totalMs % 1000) / 10);
           
           document.getElementById('procrastinationTimer').textContent = 
-            `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        }, 1000);
+            `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(2, '0')}`;
+          
+          // Occasionally decrease productivity while procrastinating
+          if (totalMs % 5000 === 0) {
+            decreaseProductivity();
+          }
+        }, 10); // Update every 10ms
       }
 
       // Task postponer
@@ -286,6 +376,9 @@
         const randomMessage = postponeMessages[Math.floor(Math.random() * postponeMessages.length)];
         document.getElementById('postponeMessage').textContent = randomMessage;
         document.getElementById('postponeMessage').style.opacity = '1';
+        
+        // Decrease productivity when postponing tasks
+        decreaseProductivity();
         
         setTimeout(() => {
           document.getElementById('postponeMessage').style.opacity = '0';
@@ -305,6 +398,11 @@
         const randomMessage = moodMessages[Math.floor(Math.random() * moodMessages.length)];
         document.getElementById('moodMessage').textContent = randomMessage;
         document.getElementById('moodMessage').style.opacity = '1';
+        
+        // Slightly increase productivity when boosting mood (we're being "productive" at procrastinating!)
+        if (Math.random() > 0.7) { // 30% chance
+          increaseProductivity();
+        }
         
         setTimeout(() => {
           document.getElementById('moodMessage').style.opacity = '0';
