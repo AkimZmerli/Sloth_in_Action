@@ -4,84 +4,338 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procrastinators.unite</title>
+    <title>Sloth in Action | Procrastinate Forever</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/slothDawdler.png">
   </head>
   
   <body>
-
-    <Header>
-      <nav>
-        <a href="index.html"><div class="Logo">ProcrastinateForever</div></a>
-    <ul>
-      <li><a href="mission.html">Our Mission</a></li>
-      <li><a href="https://www.secretatlas.com/explorers-club/photography-tips/top-50-destinations-for-wildlife-photography/" target="_blank">Cute Animals</a></li>
-      <li><a href="https://www.factslides.com/" target="_blank">Random Facts</a></li>
-      <li><a href="https://www.youtube.com/watch?v=exI_hD_4jAM" target="_blank">Travel Destinations</a></li>
+    <div class="scroll-progress"></div>
     
-    </ul>
-  </nav>
-  <header.container>
-  <div class="awesome">
-    <div class="more">
-    <div class="website">Procrastination is awesome</div> 
-      <div class="subtext"><p>Really?! This fan page is dedicated to the fullest bringing you all the latest framing on why we should all procrastinate even more!
-    </p></div>
-      <a href= "https://www.youtube.com/watch?v=qYKrqd9VacY" target="_blank">
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+          <div class="logo">🦥 ProcrastinateForever</div>
+        </a>
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="mission.html" class="nav-link">Our Mission</a></li>
+          <li><a href="https://www.secretatlas.com/explorers-club/photography-tips/top-50-destinations-for-wildlife-photography/" target="_blank" class="nav-link">Cute Animals</a></li>
+          <li><a href="https://www.factslides.com/" target="_blank" class="nav-link">Random Facts</a></li>
+          <li><a href="https://www.youtube.com/watch?v=exI_hD_4jAM" target="_blank" class="nav-link">Travel Destinations</a></li>
+        </ul>
+      </nav>
+      
+      <div class="hero-section">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Procrastination is <span class="highlight">awesome</span> 🌟</h1>
+            <div class="hero-subtitle">
+              <p>Really?! This fan page is dedicated to bringing you all the latest insights on why we should all procrastinate even more!</p>
+            </div>
+            <div class="cta-buttons">
+              <a href="https://www.youtube.com/watch?v=qYKrqd9VacY" target="_blank" class="btn-primary">
+                Start procrastinating ⚡
+              </a>
+              <button class="sloth-facts-btn btn-secondary" onclick="showRandomFact()">
+                Random Sloth Fact 🤔
+              </button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="floating-sloth">
+              <img src="images/hangingsloth.jpg" alt="Hanging sloth living its best life" class="sloth-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <main class="main-content">
+      <section class="sloth-types-section">
+        <div class="section-header">
+          <h2 class="section-title">What types of Procrastinator are out there?</h2>
+          <p class="section-subtitle">Choose your spirit Sloth 🦥✨</p>
+          <div class="productivity-meter">
+            <div class="meter-label">Current Productivity Level:</div>
+            <div class="meter-bar">
+              <div class="meter-fill" id="productivityMeter"></div>
+            </div>
+            <div class="meter-percentage">5%</div>
+          </div>
+        </div>
         
-    <button class="button1" type="button">Start procrastinating</button>
-  </div>
-</a>
-    <div class="placeholder">
-     <img src="images/hangingsloth.jpg" alt="sloth" width="500" height="300">  
-    </div>
-  </header.container>
-  </div>
-</Header>
+        <div class="sloth-grid">
+          <div class="sloth-card" data-type="dawdler">
+            <div class="card-inner">
+              <a href="https://www.youtube.com/watch?v=wnU8LpcEfVs" target="_blank">
+                <img src="images/slothDawdler.png" alt="The Classical Dawdler sloth" class="sloth-image">
+              </a>
+              <div class="card-content">
+                <h3>The Classical Dawdler</h3>
+                <p>"I'll do it... eventually 🕰️"</p>
+                <div class="card-stats">
+                  <span class="stat">Efficiency: ⭐</span>
+                  <span class="stat">Chill Level: ⭐⭐⭐⭐⭐</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sloth-card" data-type="distracted">
+            <div class="card-inner">
+              <a href="https://www.omfgdogs.com/#" target="_blank">
+                <img src="images/slothDistract.png" alt="The Easily Distracted sloth" class="sloth-image">
+              </a>
+              <div class="card-content">
+                <h3>The Easily Distracted</h3>
+                <p>"Wait, what was I doing? 🤔"</p>
+                <div class="card-stats">
+                  <span class="stat">Focus: ⭐</span>
+                  <span class="stat">Fun Level: ⭐⭐⭐⭐⭐</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sloth-card" data-type="dodger">
+            <div class="card-inner">
+              <a href="https://wutangnamefor.me/" target="_blank">
+                <img src="images/slothTitanic.png" alt="The Responsibility Dodger sloth" class="sloth-image">
+              </a>
+              <div class="card-content">
+                <h3>The Responsibility Dodger</h3>
+                <p>"That's future me's problem! 🚀"</p>
+                <div class="card-stats">
+                  <span class="stat">Responsibility: ⭐</span>
+                  <span class="stat">Optimism: ⭐⭐⭐⭐⭐</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sloth-card" data-type="perfectionist">
+            <div class="card-inner">
+              <a href="https://cummingordrumming.com/#" target="_blank">
+                <img src="images/slothRipped.png" alt="The Hesitant Perfectionist sloth" class="sloth-image">
+              </a>
+              <div class="card-content">
+                <h3>The Hesitant Perfectionist</h3>
+                <p>"It's not ready yet... needs more work 💪"</p>
+                <div class="card-stats">
+                  <span class="stat">Standards: ⭐⭐⭐⭐⭐</span>
+                  <span class="stat">Speed: ⭐</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<body>
-<div class="main">
- 
-  <div class="body">
-  <div class="information">What types of Procrastinator are out there?<p>Choose your spirit Sloth</p></div>
-  
-  </div>
-  <div class="boxes">
-  <div class="box-item">
-    <div class="box-one"><a href="https://www.youtube.com/watch?v=wnU8LpcEfVs" target="_blank"><img src="images/slothDawdler.png" width="250" height="250" alt="slothDawdler"></a></div><p>The Classical Dawdler</p>
-  </div>
-    <div class="box-item">
-    <div class="box-two"><a href="https://www.omfgdogs.com/#" target="_blank"><img src="images/slothDistract.png" alt="crying shiba" width="250" height="250"></a></div><p>The Easily Distracted</p>
-  </div>
-  <div class="box-item">
-    <div class="box-three"><a href="https://wutangnamefor.me/" target="_blank"><img src="images/slothTitanic.png" alt="shiba turned to bread" width="250" height="250"></a></div><p>The Responsibility Dodger</p>
-  
-  </div>
-    <div class="box-item">
-    <div class="box-four"><a href="https://cummingordrumming.com/#" target="_blank"><img src="images/slothRipped.png" alt="beefed shiba" width="250" height="250"></a></div><p>The Hesitant Perfectionst</p>
-  </div>
-  </div>
-  </div>
-  <div class="thor-all">
-    <!-- quote the benefits of procrastination -->
-  <div class="thor">
-    
-"Sometimes I think my height is just there so people can look up to me. It's like my social contribution to society - I give the neck-lazy ones some exercise."</div>
-    <div class="quote"><p><strong>- Danny DeVito</strong></p></div>
-</div>
-  <div class="action">
-    <div class="time">
-    <strong>Still feeling productive? Let's change that!</strong>
-    <p>Your life will never be the same..ProcrastinateForever</p></div>
-    <a href= "https://www.youtube.com/watch?v=oT3mCybbhf0" target="_blank">
-      <button class="button2">Change my Life</button></a>
-  
-  </div>
-</div>
+      <section class="quote-section">
+        <div class="quote-container">
+          <div class="quote-text">
+            "Sometimes I think my height is just there so people can look up to me. It's like my social contribution to society - I give the neck-lazy ones some exercise."
+          </div>
+          <div class="quote-author">
+            <strong>- Danny DeVito</strong>
+          </div>
+        </div>
+      </section>
 
-</body>
-       <div class="footer">
-      Copyright &#169 Akim Zmerli 2024
+      <section class="cta-section">
+        <div class="cta-container">
+          <div class="cta-content">
+            <h3>Still feeling productive? Let's change that!</h3>
+            <p>Your life will never be the same... ProcrastinateForever</p>
+          </div>
+          <a href="https://www.youtube.com/watch?v=oT3mCybbhf0" target="_blank" class="btn-cta">
+            Change my Life ✨
+          </a>
+        </div>
+      </section>
+
+      <section class="fun-features">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h4>Procrastination Timer</h4>
+            <p>Track how long you've been avoiding work!</p>
+            <button onclick="startProcrastinationTimer()" class="feature-btn">Start Timer</button>
+            <div id="procrastinationTimer" class="timer-display">00:00:00</div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h4>Task Postponer</h4>
+            <p>Scientifically delay your important tasks</p>
+            <button onclick="postponeTask()" class="feature-btn">Postpone</button>
+            <div id="postponeMessage" class="postpone-message"></div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🌈</div>
+            <h4>Mood Booster</h4>
+            <p>Get instant motivation... to procrastinate more!</p>
+            <button onclick="boostMood()" class="feature-btn">Boost Mood</button>
+            <div id="moodMessage" class="mood-message"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Copyright © Akim Zmerli 2024 | Enhanced with ❤️ by Claude</p>
+        <div class="sloth-counter">
+          🦥 Sloths helped today: <span id="slothCounter">1,337</span>
+        </div>
+      </div>
+    </footer>
+
+    <div id="factModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeFactModal()">&times;</span>
+        <h3>🦥 Sloth Fact!</h3>
+        <p id="randomFact"></p>
+      </div>
     </div>
+
+    <script>
+      // Scroll progress bar
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        const viewHeight = window.innerHeight;
+        const fullHeight = document.body.scrollHeight - viewHeight;
+        const scrolledPercentage = (scrolled / fullHeight) * 100;
+        document.querySelector('.scroll-progress').style.width = scrolledPercentage + '%';
+      });
+
+      // Mobile navigation
+      document.getElementById('navToggle').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('active');
+      });
+
+      // Productivity meter animation
+      setTimeout(() => {
+        document.getElementById('productivityMeter').style.width = '5%';
+      }, 1000);
+
+      // Random sloth facts
+      const slothFacts = [
+        "Sloths only defecate once a week and can lose up to 30% of their body weight when they do!",
+        "Sloths move so slowly that algae grows on their fur, providing camouflage!",
+        "Two-toed sloths are actually faster swimmers than they are climbers!",
+        "Sloths can rotate their heads 270 degrees - perfect for procrastinating in style!",
+        "A sloth's claws are so strong they often remain hanging from branches even after death!",
+        "Sloths sleep 15-20 hours per day. They've mastered the art of rest!",
+        "Ancient ground sloths were the size of elephants - imagine procrastinating at that scale!"
+      ];
+
+      function showRandomFact() {
+        const randomIndex = Math.floor(Math.random() * slothFacts.length);
+        document.getElementById('randomFact').textContent = slothFacts[randomIndex];
+        document.getElementById('factModal').style.display = 'block';
+      }
+
+      function closeFactModal() {
+        document.getElementById('factModal').style.display = 'none';
+      }
+
+      // Procrastination timer
+      let procrastinationTime = 0;
+      let procrastinationTimer;
+
+      function startProcrastinationTimer() {
+        if (procrastinationTimer) {
+          clearInterval(procrastinationTimer);
+          procrastinationTimer = null;
+          document.querySelector('.feature-btn').textContent = 'Start Timer';
+          return;
+        }
+
+        document.querySelector('.feature-btn').textContent = 'Stop Timer';
+        procrastinationTimer = setInterval(() => {
+          procrastinationTime++;
+          const hours = Math.floor(procrastinationTime / 3600);
+          const minutes = Math.floor((procrastinationTime % 3600) / 60);
+          const seconds = procrastinationTime % 60;
+          
+          document.getElementById('procrastinationTimer').textContent = 
+            `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }, 1000);
+      }
+
+      // Task postponer
+      function postponeTask() {
+        const postponeMessages = [
+          "Task postponed until tomorrow! 📅",
+          "Maybe next week would be better? 🤔",
+          "Actually, let's think about this next month! 📆",
+          "Future you will definitely handle this! 🚀",
+          "Postponed until motivation strikes! ⚡"
+        ];
+        
+        const randomMessage = postponeMessages[Math.floor(Math.random() * postponeMessages.length)];
+        document.getElementById('postponeMessage').textContent = randomMessage;
+        document.getElementById('postponeMessage').style.opacity = '1';
+        
+        setTimeout(() => {
+          document.getElementById('postponeMessage').style.opacity = '0';
+        }, 3000);
+      }
+
+      // Mood booster
+      function boostMood() {
+        const moodMessages = [
+          "You're doing great at not doing things! 🌟",
+          "Procrastination is an art form, and you're Picasso! 🎨",
+          "Why do today what you can put off until tomorrow? 😎",
+          "You're not lazy, you're energy efficient! ⚡",
+          "Rome wasn't built in a day... and neither is your motivation! 🏛️"
+        ];
+        
+        const randomMessage = moodMessages[Math.floor(Math.random() * moodMessages.length)];
+        document.getElementById('moodMessage').textContent = randomMessage;
+        document.getElementById('moodMessage').style.opacity = '1';
+        
+        setTimeout(() => {
+          document.getElementById('moodMessage').style.opacity = '0';
+        }, 4000);
+      }
+
+      // Sloth counter animation
+      let currentCount = 1337;
+      setInterval(() => {
+        currentCount += Math.floor(Math.random() * 3);
+        document.getElementById('slothCounter').textContent = currentCount.toLocaleString();
+      }, 5000);
+
+      // Card hover effects
+      document.querySelectorAll('.sloth-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      // Close modal when clicking outside
+      window.onclick = function(event) {
+        const modal = document.getElementById('factModal');
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      };
+    </script>
   </body>
 </html>
